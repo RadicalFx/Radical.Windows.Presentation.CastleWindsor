@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CDD1DA5D-B3A3-4274-9F83-4ACDE54C34EF}"
 	ProjectSection(SolutionItems) = preProject
@@ -21,11 +21,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Radical.Windows.Presentation.CastleWindsor", "net45\Radical.Windows.Presentation.CastleWindsor\Radical.Windows.Presentation.CastleWindsor.csproj", "{1B898AE6-9D4A-492C-B9CA-95272A6C6FF1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{557CC2FF-843C-4096-B12B-6F9A8884FA3E}"
-EndProject
-Project("{E09DD79A-4488-4AB9-8D3F-A7EEE78BF432}") = "Radical.Windows.Presentation.CastleWindsor", "nuget\Radical.Windows.Presentation.CastleWindsor\Radical.Windows.Presentation.CastleWindsor.nuproj", "{FD538470-B83A-4055-AF01-E1885FBBBAA0}"
-	ProjectSection(ProjectDependencies) = postProject
-		{1B898AE6-9D4A-492C-B9CA-95272A6C6FF1} = {1B898AE6-9D4A-492C-B9CA-95272A6C6FF1}
-		{E72F0DF7-1725-4F64-AAFF-00208CD7553E} = {E72F0DF7-1725-4F64-AAFF-00208CD7553E}
+	ProjectSection(SolutionItems) = preProject
+		nuget\Radical.Windows.Presentation.CastleWindsor.nuspec = nuget\Radical.Windows.Presentation.CastleWindsor.nuspec
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "net40", "net40", "{667F5571-5118-4BDB-A011-BFB5DEAE389C}"
@@ -64,16 +61,6 @@ Global
 		{1B898AE6-9D4A-492C-B9CA-95272A6C6FF1}.Release|ARM.ActiveCfg = Release|Any CPU
 		{1B898AE6-9D4A-492C-B9CA-95272A6C6FF1}.Release|x64.ActiveCfg = Release|Any CPU
 		{1B898AE6-9D4A-492C-B9CA-95272A6C6FF1}.Release|x86.ActiveCfg = Release|Any CPU
-		{FD538470-B83A-4055-AF01-E1885FBBBAA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD538470-B83A-4055-AF01-E1885FBBBAA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD538470-B83A-4055-AF01-E1885FBBBAA0}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{FD538470-B83A-4055-AF01-E1885FBBBAA0}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{FD538470-B83A-4055-AF01-E1885FBBBAA0}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{FD538470-B83A-4055-AF01-E1885FBBBAA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD538470-B83A-4055-AF01-E1885FBBBAA0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FD538470-B83A-4055-AF01-E1885FBBBAA0}.Release|ARM.ActiveCfg = Release|Any CPU
-		{FD538470-B83A-4055-AF01-E1885FBBBAA0}.Release|x64.ActiveCfg = Release|Any CPU
-		{FD538470-B83A-4055-AF01-E1885FBBBAA0}.Release|x86.ActiveCfg = Release|Any CPU
 		{D8CBEDAB-2991-47DA-82F0-D748C0AFB11A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D8CBEDAB-2991-47DA-82F0-D748C0AFB11A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8CBEDAB-2991-47DA-82F0-D748C0AFB11A}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -91,7 +78,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E72F0DF7-1725-4F64-AAFF-00208CD7553E} = {D02EE7AB-5E92-4BF2-9ADC-1CFF12355895}
 		{1B898AE6-9D4A-492C-B9CA-95272A6C6FF1} = {135601F4-F15B-4EB2-A3F9-1385E9C1AE93}
-		{FD538470-B83A-4055-AF01-E1885FBBBAA0} = {557CC2FF-843C-4096-B12B-6F9A8884FA3E}
 		{667F5571-5118-4BDB-A011-BFB5DEAE389C} = {4D938E88-567A-4F81-A0E4-A56650C81053}
 		{D8CBEDAB-2991-47DA-82F0-D748C0AFB11A} = {667F5571-5118-4BDB-A011-BFB5DEAE389C}
 	EndGlobalSection
