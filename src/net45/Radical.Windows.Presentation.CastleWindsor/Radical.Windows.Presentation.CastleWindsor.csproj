@@ -128,9 +128,6 @@
     <Compile Include="..\..\net40\Radical.Windows.Presentation.CastleWindsor\Properties\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="..\..\net40\Radical.Windows.Presentation.CastleWindsor\Properties\NugetInfo.cs">
-      <Link>Properties\NugetInfo.cs</Link>
-    </Compile>
     <Compile Include="..\..\net40\Radical.Windows.Presentation.CastleWindsor\RequiredDependencyAttribute.cs">
       <Link>RequiredDependencyAttribute.cs</Link>
     </Compile>

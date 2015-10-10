@@ -1,6 +1,8 @@
 [![Stories in Ready](https://badge.waffle.io/Radicalfx/Radical.png?label=ready&title=Ready)](http://waffle.io/Radicalfx/Radical)
 [![Stories in Progress](https://badge.waffle.io/Radicalfx/Radical.png?label=in progress&title=In Progress)](http://waffle.io/Radicalfx/Radical)
 
+[![Build status](https://ci.appveyor.com/api/projects/status/p900of75fotgiw9e?svg=true)](https://ci.appveyor.com/project/radical-bot/radical-windows-presentation-castlewindsor)
+
 --
 
 ![Radical logo](Radical.png)
