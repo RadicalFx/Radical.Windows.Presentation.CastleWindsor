@@ -2,7 +2,7 @@
 #     DEVELOPMENT BRANCH
 #
 # build in Debug mode and deploy to MyGet.org as pre-release
-- version: 1.4.0-alpha1+{build}
+- version: 1.4.1-alpha1+{build}
   branches:
     only:
     - develop
@@ -10,6 +10,8 @@
   platform: Any CPU
   environment:
     use_build_number_in_packages: true
+  pull_requests:
+    do_not_increment_build_number: true
   cache:
   - src\packages -> src\**\packages.config
   install:
@@ -47,6 +49,8 @@
     - master
   configuration: Release
   platform: Any CPU
+  pull_requests:
+    do_not_increment_build_number: true
   cache:
   - src\packages -> src\**\packages.config
   install:
