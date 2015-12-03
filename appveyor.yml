@@ -2,7 +2,7 @@
 #     DEVELOPMENT BRANCH
 #
 # build in Debug mode and deploy to MyGet.org as pre-release
-- version: 1.4.1-alpha1+{build}
+- version: 1.4.1-alpha2+{build}
   branches:
     only:
     - develop
