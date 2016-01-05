@@ -74,6 +74,6 @@
   - path: src\build\nuget\*.nupkg
   deploy:
   - provider: Environment
-    name: MyGet feed
+    name: NuGet public feed
     on:
       branch: master
