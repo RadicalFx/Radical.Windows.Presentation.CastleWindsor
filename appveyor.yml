@@ -10,9 +10,6 @@
   configuration: Debug
   platform: Any CPU
 
-  environment:
-    use_build_number_in_packages: true
-
   artifacts:
     - path: src\build\Debug
     - path: src\build\nuget\*.nupkg
@@ -31,8 +28,8 @@
     - md "src\build\nuget"
     - nuget pack "src\nuget\Radical.Windows.Presentation.CastleWindsor.nuspec" -Version "%GitVersion_NuGetVersion%" -Properties "configuration=%CONFIGURATION%" -OutputDirectory "src\build\nuget"
 
-  pull_requests:
-    do_not_increment_build_number: true
+#  pull_requests:
+#    do_not_increment_build_number: true
 
   test:
     categories:
@@ -57,9 +54,6 @@
   configuration: Release
   platform: Any CPU
 
-  environment:
-    use_build_number_in_packages: true
-
   artifacts:
     - path: src\build\Release
     - path: src\build\nuget\*.nupkg
@@ -78,8 +72,8 @@
     - md "src\build\nuget"
     - nuget pack "src\nuget\Radical.Windows.Presentation.CastleWindsor.nuspec" -Version "%GitVersion_NuGetVersion%" -Properties "configuration=%CONFIGURATION%" -OutputDirectory "src\build\nuget"
 
-  pull_requests:
-    do_not_increment_build_number: true
+#  pull_requests:
+#    do_not_increment_build_number: true
 
   test:
     categories:
