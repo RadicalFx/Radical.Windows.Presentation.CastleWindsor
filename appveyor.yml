@@ -7,6 +7,7 @@
     only:
     - develop
 
+  skip_tags: true
   configuration: Debug
   platform: Any CPU
 
@@ -28,9 +29,6 @@
     - md "src\build\nuget"
     - nuget pack "src\nuget\Radical.Windows.Presentation.CastleWindsor.nuspec" -Version "%GitVersion_NuGetVersion%" -Properties "configuration=%CONFIGURATION%" -OutputDirectory "src\build\nuget"
 
-#  pull_requests:
-#    do_not_increment_build_number: true
-
   test:
     categories:
       except:
@@ -51,6 +49,7 @@
     only:
     - master
 
+  skip_tags: true
   configuration: Release
   platform: Any CPU
 
@@ -72,9 +71,6 @@
     - md "src\build\nuget"
     - nuget pack "src\nuget\Radical.Windows.Presentation.CastleWindsor.nuspec" -Version "%GitVersion_NuGetVersion%" -Properties "configuration=%CONFIGURATION%" -OutputDirectory "src\build\nuget"
 
-#  pull_requests:
-#    do_not_increment_build_number: true
-
   test:
     categories:
       except:
@@ -84,5 +80,13 @@
   deploy:
   - provider: Environment
     name: NuGet public feed
+    on:
+      branch: master
+  - provider: GitHub    
+    release: $(GitVersion_NuGetVersion)
+    description: 'Release v$(GitVersion_NuGetVersion)'
+    auth_token:
+      secure: 2ijF4OfPYfIUTunubL/Z04ogADL9sx/gKW1jMRNJnAa1OpHZpSvCKmP0gvNs8C7h
+    artifact: /.*\.nupkg/, src\build\Release.zip
     on:
       branch: master
