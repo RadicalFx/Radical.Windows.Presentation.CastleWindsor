@@ -15,8 +15,8 @@
     <language>en-US</language>
     <tags>Radical Radical.Windows</tags>
     <dependencies>
-      <dependency id="Castle.Windsor" version="3.3.0" />
-      <dependency id="Radical.Windows.Presentation" version="1.10.3.0" />
+      <dependency id="Castle.Windsor" version="[3.3.0,4.0)" />
+      <dependency id="Radical.Windows.Presentation" version="[1.10.3.0,2.0)" />
     </dependencies>
   </metadata>
   <files>
