@@ -3,8 +3,6 @@
 	using System;
 	using System.Linq;
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
-	using Rhino.Mocks;
-	using SharpTestsEx;
 	using Castle.MicroKernel.Registration;
 	using Castle.MicroKernel.SubSystems.Naming;
 	using Castle.MicroKernel;
@@ -20,7 +18,7 @@
 
 			var actual = ContainerExtensions.IsRegistered<Object>( target );
 
-			actual.Should().Be.True();
+			Assert.IsTrue(actual);
 		}
 
 		[TestMethod]
@@ -30,7 +28,7 @@
 
 			var actual = ContainerExtensions.IsRegistered<Object>( target );
 
-			actual.Should().Be.False();
+			Assert.IsFalse(actual);
 		}
 
 		interface IFoo { }
@@ -65,7 +63,7 @@
 			sut.Register( Component.For<IFoo>().ImplementedBy<AnOtherFoo>() );
 
 			var foo = sut.Resolve<IFoo>();
-			foo.Should().Be.OfType<AnOtherFoo>();
+			Assert.IsInstanceOfType(foo, typeof(AnOtherFoo));
 		}
 	}
 }

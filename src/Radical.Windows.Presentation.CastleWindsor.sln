@@ -1,34 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CDD1DA5D-B3A3-4274-9F83-4ACDE54C34EF}"
-	ProjectSection(SolutionItems) = preProject
-		..\appveyor.yml = ..\appveyor.yml
-		Command Line Arguments.txt = Command Line Arguments.txt
-		How to build.txt = How to build.txt
-		WebEssentials-Settings.json = WebEssentials-Settings.json
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Radical.Windows.Presentation.CastleWindsor", "Radical.Windows.Presentation.CastleWindsor\Radical.Windows.Presentation.CastleWindsor.csproj", "{E72F0DF7-1725-4F64-AAFF-00208CD7553E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "net40", "net40", "{D02EE7AB-5E92-4BF2-9ADC-1CFF12355895}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4D938E88-567A-4F81-A0E4-A56650C81053}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "net45", "net45", "{135601F4-F15B-4EB2-A3F9-1385E9C1AE93}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Radical.Windows.Presentation.CastleWindsor", "net40\Radical.Windows.Presentation.CastleWindsor\Radical.Windows.Presentation.CastleWindsor.csproj", "{E72F0DF7-1725-4F64-AAFF-00208CD7553E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Radical.Windows.Presentation.CastleWindsor", "net45\Radical.Windows.Presentation.CastleWindsor\Radical.Windows.Presentation.CastleWindsor.csproj", "{1B898AE6-9D4A-492C-B9CA-95272A6C6FF1}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{557CC2FF-843C-4096-B12B-6F9A8884FA3E}"
-	ProjectSection(SolutionItems) = preProject
-		nuget\Radical.Windows.Presentation.CastleWindsor.nuspec = nuget\Radical.Windows.Presentation.CastleWindsor.nuspec
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "net40", "net40", "{667F5571-5118-4BDB-A011-BFB5DEAE389C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Radical.Windows.Presentation.CastleWindsor", "net40\Test.Radical.Windows.Presentation.CastleWindsor\Test.Radical.Windows.Presentation.CastleWindsor.csproj", "{D8CBEDAB-2991-47DA-82F0-D748C0AFB11A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Radical.Windows.Presentation.CastleWindsor.Tests", "Radical.Windows.Presentation.CastleWindsor.Tests\Radical.Windows.Presentation.CastleWindsor.Tests.csproj", "{D8CBEDAB-2991-47DA-82F0-D748C0AFB11A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,16 +29,6 @@ Global
 		{E72F0DF7-1725-4F64-AAFF-00208CD7553E}.Release|ARM.ActiveCfg = Release|Any CPU
 		{E72F0DF7-1725-4F64-AAFF-00208CD7553E}.Release|x64.ActiveCfg = Release|Any CPU
 		{E72F0DF7-1725-4F64-AAFF-00208CD7553E}.Release|x86.ActiveCfg = Release|Any CPU
-		{1B898AE6-9D4A-492C-B9CA-95272A6C6FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1B898AE6-9D4A-492C-B9CA-95272A6C6FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1B898AE6-9D4A-492C-B9CA-95272A6C6FF1}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{1B898AE6-9D4A-492C-B9CA-95272A6C6FF1}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{1B898AE6-9D4A-492C-B9CA-95272A6C6FF1}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{1B898AE6-9D4A-492C-B9CA-95272A6C6FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1B898AE6-9D4A-492C-B9CA-95272A6C6FF1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1B898AE6-9D4A-492C-B9CA-95272A6C6FF1}.Release|ARM.ActiveCfg = Release|Any CPU
-		{1B898AE6-9D4A-492C-B9CA-95272A6C6FF1}.Release|x64.ActiveCfg = Release|Any CPU
-		{1B898AE6-9D4A-492C-B9CA-95272A6C6FF1}.Release|x86.ActiveCfg = Release|Any CPU
 		{D8CBEDAB-2991-47DA-82F0-D748C0AFB11A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D8CBEDAB-2991-47DA-82F0-D748C0AFB11A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8CBEDAB-2991-47DA-82F0-D748C0AFB11A}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -76,13 +43,8 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{E72F0DF7-1725-4F64-AAFF-00208CD7553E} = {D02EE7AB-5E92-4BF2-9ADC-1CFF12355895}
-		{1B898AE6-9D4A-492C-B9CA-95272A6C6FF1} = {135601F4-F15B-4EB2-A3F9-1385E9C1AE93}
-		{667F5571-5118-4BDB-A011-BFB5DEAE389C} = {4D938E88-567A-4F81-A0E4-A56650C81053}
-		{D8CBEDAB-2991-47DA-82F0-D748C0AFB11A} = {667F5571-5118-4BDB-A011-BFB5DEAE389C}
-	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+		SolutionGuid = {811A1E73-8AAD-4611-9F67-814D620D541A}
 	EndGlobalSection
 EndGlobal
