@@ -22,7 +22,7 @@ namespace Castle.Facilities
     {
         static readonly TraceSource logger = new TraceSource( typeof( SubscribeToMessageFacility ).FullName );
 
-		IList<Tuple<String, IHandler>> buffer = new List<Tuple<String, IHandler>>();
+        IList<Tuple<String, IHandler>> buffer = new List<Tuple<String, IHandler>>();
         Boolean isMessageBrokerRegistered = false;
 
         void Attach( String key, IHandler h )
@@ -168,15 +168,7 @@ namespace Castle.Facilities
                         for ( var i = buffer.Count; i > 0; i-- )
                         {
                             var cmp = this.buffer[ i - 1 ];
-
-#if FX40
                             this.Attach( cmp.Item1, cmp.Item2 );
-#else
-							this.Attach( cmp.Value1, cmp.Value2 );
-#endif
-
-
-
                             this.buffer.Remove( cmp );
                         }
 
@@ -194,12 +186,7 @@ namespace Castle.Facilities
                             h.ComponentModel.Implementation.ToString( "SN" )
                         );
 
-#if FX40
                         this.buffer.Add( new Tuple<String, IHandler>( s, h ) );
-#else
-						this.buffer.Add( new Values<String, IHandler>( s, h ) );
-#endif
-
                     }
                     else
                     {
