@@ -1,11 +1,6 @@
-[![Stories in Ready](https://badge.waffle.io/Radicalfx/Radical.Windows.Presentation.CastleWindsor.png?label=ready&title=Ready)](http://waffle.io/radicalfx/housekeeping)
-[![Stories in Progress](https://badge.waffle.io/Radicalfx/Radical.Windows.Presentation.CastleWindsor.png?label=in progress&title=In Progress)](http://waffle.io/radicalfx/housekeeping)
+# Radical.Windows.Presentation.CastleWindsor
 
-[![Build status](https://ci.appveyor.com/api/projects/status/p900of75fotgiw9e?svg=true)](https://ci.appveyor.com/project/radical-bot/radical-windows-presentation-castlewindsor)
-
---
-
-![Radical logo](Radical.png)
+![Radical logo](assets/icon.png)
 
 *Radical* is an infrastructure framework whose primary role is to help in the development of composite WPF applications based on the Model View ViewModel pattern.
 
@@ -15,11 +10,12 @@ The Radical framework is not tied to WPF but some part of it can be freely used,
 
 ### Release
 
-The latest release can be found on NuGet: http://www.nuget.org/profiles/radical
+The latest release can be found on NuGet: <http://www.nuget.org/profiles/radical>
 
-Development feed is available at: 
-* NuGet V3 feed URL: https://www.myget.org/F/radical-unstable/api/v3/index.json
-* NuGet V2 feed URL: https://www.myget.org/F/radical-unstable/api/v2
+Development feed is available at:
+
+* NuGet V3 feed URL: <https://www.myget.org/F/radical-unstable/api/v3/index.json>
+* NuGet V2 feed URL: <https://www.myget.org/F/radical-unstable/api/v2>
 
 ### Q&A
 
