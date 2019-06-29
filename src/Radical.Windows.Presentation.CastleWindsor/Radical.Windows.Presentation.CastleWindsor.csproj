@@ -7,7 +7,7 @@
   <PropertyGroup>
     <PackageIconUrl>http://www.radicalframework.com/img/radical-ico.png</PackageIconUrl>
     <Authors>Mauro Servienti, Michael Denny, Nazareno Manco</Authors>
-    <Description>Unity4 support for Radical Framework</Description>
+    <Description>Castle Windsor support for Radical Framework</Description>
     <PackageLicenseUrl>https://github.com/RadicalFx/Radical.Windows.Presentation.CastleWindsor/blob/master/license.md</PackageLicenseUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
@@ -37,6 +37,22 @@
     <PackageReference Include="Castle.Windsor" Version="3.3.0" />
     <PackageReference Include="Expression.Blend.Sdk" Version="[1.0.2]" />
     <PackageReference Include="Radical.Windows.Presentation" Version="1.10.3.1" />
+    <PackageReference Include="MinVer" Version="1.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
+
+  <PropertyGroup>
+    <MinVerMinimumMajorMinor>2.0</MinVerMinimumMajorMinor>
+  </PropertyGroup>
+
+  <Target Name="AppVeyorPullRequestsTarget" AfterTargets="MinVer" Condition="'$(APPVEYOR_PULL_REQUEST_NUMBER)' != ''">
+    <PropertyGroup>
+      <PackageVersion>$(MinVerMajor).$(MinVerMinor).$(MinVerPatch)-pr.$(APPVEYOR_PULL_REQUEST_NUMBER).build-id.$(APPVEYOR_BUILD_ID).$(MinVerPreRelease)</PackageVersion>
+      <PackageVersion Condition="'$(MinVerBuildMetadata)' != ''">$(PackageVersion)+$(MinVerBuildMetadata)</PackageVersion>
+      <Version>$(PackageVersion)</Version>
+    </PropertyGroup>
+  </Target>
 
 </Project>
