@@ -8,7 +8,7 @@ using Topics.Radical.Messaging;
 using Topics.Radical.ComponentModel;
 using Topics.Radical.Threading;
 
-namespace Test.Radical.Extensions.Castle
+namespace Radical.Windows.Presentation.CastleWindsor.Tests
 {
 	[TestClass()]
 	public class SubscribeToMessageFacilityTest
