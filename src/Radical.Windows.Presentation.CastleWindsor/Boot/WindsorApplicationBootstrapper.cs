@@ -61,14 +61,14 @@ namespace Topics.Radical.Windows.Presentation.Boot
             this.container.Register(
                 Component.For<IServiceProvider>()
                     .Instance( wrapper )
-                    .Properties( pi => bootConventions.IgnorePropertyInjection( pi ) ) 
+                    .PropertiesIgnore( pi => bootConventions.IgnorePropertyInjection( pi ) ) 
             );
             this.container.Register( Component.For<IWindsorContainer>().Instance( this.container ) );
             this.container.Register
             (
                 Component.For<BootstrapConventions>()
                     .Instance( bootConventions )
-                    .Properties( pi => bootConventions.IgnorePropertyInjection( pi ) ) 
+                    .PropertiesIgnore( pi => bootConventions.IgnorePropertyInjection( pi ) ) 
             );
 
             this.container.AddFacility<Castle.Facilities.SubscribeToMessageFacility>();
