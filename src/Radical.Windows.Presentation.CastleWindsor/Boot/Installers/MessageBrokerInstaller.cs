@@ -23,7 +23,7 @@ namespace Topics.Radical.Windows.Presentation.Boot.Installers
             // Registriamo gli handler
             container.Register
             (
-                AllTypes.FromAssemblyInDirectory( new AssemblyFilter( currentDirectory ).FilterByAssembly( conventions.IncludeAssemblyInContainerScan ) )
+                Types.FromAssemblyInDirectory( new AssemblyFilter( currentDirectory ).FilterByAssembly( conventions.IncludeAssemblyInContainerScan ) )
                     .IncludeNonPublicTypes()
                     .Where( t => conventions.IsMessageHandler( t ) && !conventions.IsExcluded( t ) )
                     .WithService.Select( ( type, baseTypes ) => conventions.SelectMessageHandlerContracts( type ) )

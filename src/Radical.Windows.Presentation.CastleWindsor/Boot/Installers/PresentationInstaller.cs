@@ -34,7 +34,7 @@ namespace Topics.Radical.Windows.Presentation.Boot.Installers
 
             container.Register
             (
-				AllTypes.FromAssemblyInDirectory( new AssemblyFilter( currentDirectory ).FilterByAssembly( conventions.IncludeAssemblyInContainerScan ) )
+				Types.FromAssemblyInDirectory( new AssemblyFilter( currentDirectory ).FilterByAssembly( conventions.IncludeAssemblyInContainerScan ) )
                     .IncludeNonPublicTypes()
                     .Where( t => conventions.IsViewModel( t ) && !conventions.IsExcluded( t ) )
                     .WithService.Select( ( type, baseTypes ) => conventions.SelectViewModelContracts( type ) )
@@ -57,7 +57,7 @@ namespace Topics.Radical.Windows.Presentation.Boot.Installers
 
             container.Register
             (
-				AllTypes.FromAssemblyInDirectory( new AssemblyFilter( currentDirectory ).FilterByAssembly( conventions.IncludeAssemblyInContainerScan ) )
+				Types.FromAssemblyInDirectory( new AssemblyFilter( currentDirectory ).FilterByAssembly( conventions.IncludeAssemblyInContainerScan ) )
                     .IncludeNonPublicTypes()
                     .Where( t => conventions.IsView( t ) && !conventions.IsExcluded( t ) )
                     .WithService.Select( ( type, baseTypes ) => conventions.SelectViewContracts( type ) )

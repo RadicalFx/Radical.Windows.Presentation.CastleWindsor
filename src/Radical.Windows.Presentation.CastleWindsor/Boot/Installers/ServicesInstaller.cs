@@ -22,7 +22,7 @@ namespace Topics.Radical.Windows.Presentation.Boot.Installers
 
             container.Register
             (
-                AllTypes.FromAssemblyInDirectory( new AssemblyFilter( currentDirectory ).FilterByAssembly( conventions.IncludeAssemblyInContainerScan ) )
+                Types.FromAssemblyInDirectory( new AssemblyFilter( currentDirectory ).FilterByAssembly( conventions.IncludeAssemblyInContainerScan ) )
                     .IncludeNonPublicTypes()
                     .Where( t => conventions.IsService( t ) && !conventions.IsExcluded( t ) )
                     .WithService.Select( ( type, baseTypes ) => conventions.SelectServiceContracts( type ) )
