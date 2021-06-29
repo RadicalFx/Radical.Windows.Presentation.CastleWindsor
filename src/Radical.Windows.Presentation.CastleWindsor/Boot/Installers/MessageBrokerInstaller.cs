@@ -26,7 +26,6 @@ namespace Topics.Radical.Windows.Presentation.Boot.Installers
             container.Register
             (
                 Types.From( types )
-                    .IncludeNonPublicTypes()
                     .Where( t => conventions.IsMessageHandler( t ) && !conventions.IsExcluded( t ) )
                     .WithService.Select( ( type, baseTypes ) => conventions.SelectMessageHandlerContracts( type ) )
                     .Configure( c => c.PropertiesIgnore( conventions.IgnorePropertyInjection ) )
