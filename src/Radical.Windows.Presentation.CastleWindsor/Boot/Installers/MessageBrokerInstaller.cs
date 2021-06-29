@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.Composition;
+using System;
+using System.ComponentModel.Composition;
 using Castle.MicroKernel.Registration;
 using Topics.Radical.ComponentModel.Messaging;
 
@@ -19,11 +20,12 @@ namespace Topics.Radical.Windows.Presentation.Boot.Installers
         {
             var conventions = container.Resolve<BootstrapConventions>();
             var currentDirectory = Helpers.EnvironmentHelper.GetCurrentDirectory();
+            var types = container.Resolve<Type[]>();
 
             // Registriamo gli handler
             container.Register
             (
-                Types.FromAssemblyInDirectory( new AssemblyFilter( currentDirectory ).FilterByAssembly( conventions.IncludeAssemblyInContainerScan ) )
+                Types.From( types )
                     .IncludeNonPublicTypes()
                     .Where( t => conventions.IsMessageHandler( t ) && !conventions.IsExcluded( t ) )
                     .WithService.Select( ( type, baseTypes ) => conventions.SelectMessageHandlerContracts( type ) )
